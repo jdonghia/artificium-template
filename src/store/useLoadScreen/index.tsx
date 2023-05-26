@@ -1,5 +1,6 @@
 import { createContext, useState, useContext, useMemo } from "react";
 import { Logo } from "src/components/svgs";
+import { LoadingText } from "src/components";
 import { LoadScreenWrapper } from "./style";
 import { ContextProps, ProviderProps } from "./types";
 
@@ -13,6 +14,11 @@ function LoadScreen(): JSX.Element {
   return (
     <LoadScreenWrapper>
       <Logo size={2} />
+      <LoadingText
+        text="Loading information, please hold on"
+        dotCount={3}
+        dotDelay={0.1}
+      />
     </LoadScreenWrapper>
   );
 }
