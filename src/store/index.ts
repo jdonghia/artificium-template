@@ -1,3 +1,5 @@
 import GlobalStyleProvider from "./useGlobalStyle";
 
-export { GlobalStyleProvider };
+import { useLoading, LoadScreenProvider } from "./useLoadScreen";
+
+export { GlobalStyleProvider, useLoading, LoadScreenProvider };

@@ -1,10 +1,12 @@
 import Router from "src/router";
-import { GlobalStyleProvider } from "src/store";
+import { GlobalStyleProvider, LoadScreenProvider } from "src/store";
 
 export default function App() {
   return (
     <GlobalStyleProvider>
-      <Router />
+      <LoadScreenProvider>
+        <Router />
+      </LoadScreenProvider>
     </GlobalStyleProvider>
   );
 }
