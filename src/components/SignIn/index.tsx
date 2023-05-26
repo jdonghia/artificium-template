@@ -75,7 +75,7 @@ export default function SignIn() {
         <SocialLoginWrapper className="mt-4">
           <SocialLoginButton className="me-3">
             <img
-              src="src/assets/imgs/google-logo.png"
+              src="src/assets/imgs/logos/google.png"
               alt="Google Logo"
               className="me-2"
             />
@@ -83,7 +83,7 @@ export default function SignIn() {
           </SocialLoginButton>
           <SocialLoginButton className="ms-3">
             <img
-              src="src/assets/imgs/apple-logo.png"
+              src="src/assets/imgs/logos/apple.png"
               alt="Apple Logo"
               className="me-2"
             />
