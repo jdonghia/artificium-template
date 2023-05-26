@@ -4,6 +4,7 @@ const COLORS_THEME_PROVIDER = {
   "noble-black-400": "#686B6E",
   "noble-black-500": "#363A3D",
   "noble-black-600": "#1A1D21",
+  "noble-black-700": "#131619",
   "gradient-blue": "linear-gradient(#82DBF7, #B6F09C)",
   "stem-green-500": "#B6F09C",
   "day-blue-900": "#0C1132",
