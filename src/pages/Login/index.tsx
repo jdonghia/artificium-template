@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { useLoading } from "src/store";
 import { Logo } from "src/components/svgs";
-import { motion } from "framer-motion"; // Import motion from Framer Motion
+import { motion } from "framer-motion";
 import {
   Aside,
   Checkbox,
@@ -24,7 +24,7 @@ import {
 } from "./style";
 
 const fadeAnimation = {
-  initial: { opacity: 0, x: -50 },
+  initial: { opacity: 0, x: -25 },
   animate: {
     opacity: 1,
     x: 0,
