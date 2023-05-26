@@ -1,8 +1,10 @@
-export default function Logo() {
+import { Props } from "./types";
+
+export default function Logo({ size }: Props) {
   return (
     <svg
-      width="36"
-      height="34"
+      width={size ? size * 36 : 36}
+      height={size ? size * 34 : 34}
       viewBox="0 0 36 34"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
