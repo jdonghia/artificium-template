@@ -1,5 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
+import { useLoading } from "src/store";
 import { Logo } from "src/components/svgs";
+import { motion } from "framer-motion"; // Import motion from Framer Motion
 import {
   Aside,
   Checkbox,
@@ -21,7 +23,25 @@ import {
   Title,
 } from "./style";
 
+const fadeAnimation = {
+  initial: { opacity: 0, x: -50 },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+    },
+  },
+};
 export default function Login() {
+  const { showLoading, hideLoading } = useLoading();
+
+  const simulateLoading = () => {
+    showLoading();
+    setTimeout(() => hideLoading(), 3000);
+  };
+
   return (
     <Container fluid className="vh-100">
       <Row className="h-100">
@@ -30,14 +50,18 @@ export default function Login() {
             <Logo />
           </header>
           <FormWrapper className="mx-auto my-5">
-            <div>
+            <motion.div
+              variants={fadeAnimation} // Apply fade animation variants
+              initial="initial" // Set initial animation state
+              animate="animate" // Set animate animation state
+            >
               <Title>
                 Let`s get <EmphasisTitle>creative!</EmphasisTitle>
               </Title>
               <Subtitle className="mt-3">
                 Log in to Artificium to start creating magic.
               </Subtitle>
-            </div>
+            </motion.div>
             <div className="w-100">
               <div className="my-5">
                 <Input
@@ -58,7 +82,9 @@ export default function Login() {
                 </CheckboxLabel>
                 <ForgotPassword>Forgot Password?</ForgotPassword>
               </CheckboxWrapper>
-              <LoginButton className="w-100 mt-5">Log in</LoginButton>
+              <LoginButton className="w-100 mt-5" onClick={simulateLoading}>
+                Log in
+              </LoginButton>
               <SpanbarWrapper className="mt-5">
                 <Spanbar />
                 <SpanText>or continue with</SpanText>
