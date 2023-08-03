@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Login } from "src/pages";
+import { Login, Register } from "src/pages";
 import { RouteInterface } from "./types";
 
 export default function Router() {
@@ -9,6 +9,7 @@ export default function Router() {
       id: "login",
       element: <Login />,
     },
+    { path: "/register", id: "register", element: <Register /> },
   ] as Array<RouteInterface>;
 
   return (
