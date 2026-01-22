@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import abstractBg from "src/assets/imgs/login/backgrounds/abstract.png";
 
 const Aside = styled.aside`
-  background-image: url("src/assets/imgs/login/backgrounds/abstract.png");
+  background-image: url(${abstractBg});
   border-bottom-left-radius: 3rem;
   height: 100%;
 `;

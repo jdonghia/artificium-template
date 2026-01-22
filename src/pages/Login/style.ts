@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { styledHelper } from "src/helpers";
+import abstractBg from "src/assets/imgs/login/backgrounds/abstract.png";
 
 const { getColor } = styledHelper;
 
 const Aside = styled.aside`
-  background-image: url("src/assets/imgs/login/backgrounds/abstract.png");
+  background-image: url(${abstractBg});
   border-bottom-left-radius: 3rem;
   height: 100%;
 `;

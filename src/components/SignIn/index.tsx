@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 
 import { useLoading } from "src/store";
+import googleLogo from "src/assets/imgs/logos/google.png";
+import appleLogo from "src/assets/imgs/logos/apple.png";
 
 import {
   Checkbox,
@@ -74,19 +76,11 @@ export default function SignIn() {
         </SpanbarWrapper>
         <SocialLoginWrapper className="mt-4">
           <SocialLoginButton className="me-3">
-            <img
-              src="src/assets/imgs/logos/google.png"
-              alt="Google Logo"
-              className="me-2"
-            />
+            <img src={googleLogo} alt="Google Logo" className="me-2" />
             Google Account
           </SocialLoginButton>
           <SocialLoginButton className="ms-3">
-            <img
-              src="src/assets/imgs/logos/apple.png"
-              alt="Apple Logo"
-              className="me-2"
-            />
+            <img src={appleLogo} alt="Apple Logo" className="me-2" />
             Apple Account
           </SocialLoginButton>
         </SocialLoginWrapper>
