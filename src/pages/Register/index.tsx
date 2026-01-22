@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Logo } from "src/components/svgs";
 import { Button as RegisterButton, Input } from "src/styles/common";
-import { Aside, Form as FormWrapper } from "./style";
+import { Aside } from "./style";
 
 function Form(): JSX.Element {
   return (

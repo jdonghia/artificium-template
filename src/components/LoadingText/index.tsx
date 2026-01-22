@@ -38,7 +38,7 @@ export default function LoadingText({
   );
 
   const textAnimate: TargetAndTransition = { opacity: 1, y: 0 };
-  const textInitial: boolean | TargetAndTransition = {
+  const textInitial: TargetAndTransition = {
     opacity: 0,
     y: -20,
   };
@@ -46,9 +46,9 @@ export default function LoadingText({
 
   return (
     <Text
-      animate={textAnimate}
+      animate={textAnimate as any}
       className="mt-3"
-      initial={textInitial}
+      initial={textInitial as any}
       transition={textTransition}
     >
       {text}
